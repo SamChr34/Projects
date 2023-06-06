@@ -43,7 +43,7 @@ ggplot(data = ebola_31.03.15_country, mapping = aes(x = Date, y = Cum_conf_cases
 
 ggplot(data= ebola_31.03.15_country, mapping = aes(x = Date, y = Cum_conf_cases, colour = Country, fill = Country)) +
   geom_point() + ggtitle("Ebola cases over time") +
-  scale_colour_manual(values = c("red", "blue", "purple"),
+  scale_colour_manual(values = c("green", "blue", "purple"),
                       labels = c("Liberia", "Sierra Leone", "Spain")) +
   scale_x_date(breaks = as.Date(c("2014-08-29", "2014-10-01", "2014-12-01", 
                                   "2015-02-01","2015-04-01")),
@@ -60,8 +60,8 @@ library(cowplot)
 
 ggplot(data = insurance_with_date, mapping = aes(x= bmi, colour= sex, fill= sex))+ geom_density(alpha = 0.7) + 
   xlab(label = "BMI (kg/m^2)") + theme_bw() +
-  scale_colour_manual(name ="", values = c("female" = "blue", "male" = "red", labels = c("Female", "Male"))) +
-  scale_fill_manual(name = "", values = c("female" = "blue", "male" = "red", labels = c("Female", "Male")))
+  scale_colour_manual(name ="", values = c("female" = "purple", "male" = "red", labels = c("Female", "Male"))) +
+  scale_fill_manual(name = "", values = c("female" = "purple", "male" = "red", labels = c("Female", "Male")))
 
 ggplot(data = insurance_with_date, mapping = aes(x=age, y=bmi, colour = smoker)) + geom_point() + geom_quantile() + theme_bw() 
 
@@ -88,5 +88,7 @@ usethis::gh_token_help()
 usethis::git_sitrep()
 
 gh::gh_whoami()
+
+
 
 
