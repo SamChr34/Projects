@@ -68,10 +68,13 @@ ggplot(data = insurance_with_date, mapping = aes(x=age, y=bmi, colour = smoker))
 ggplot(data = insurance_with_date, mapping = aes(x= smoker, y=charges)) + geom_violin() + ylab( label = "Charges ($)")
 
 
+
+
+
 library(usethis)
 usethis::use_git_config(user.name = "SamChr34", user.email = "samuelelias.christen@gmail.com")
 usethis::create_github_token()
-gitcreds::gitcreds_set(3)
+gitcreds::gitcreds_set()
 gitcreds::gitcreds_set()
 0
 2
@@ -81,7 +84,7 @@ gitcreds_get()
 gitcreds::gitcreds_get()
 1
 
-
+gitcreds::gitcreds_set()
 
 usethis::gh_token_help()
 
